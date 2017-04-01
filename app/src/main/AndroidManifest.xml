@@ -16,11 +16,41 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SmallLettersActivity" />
-        <activity android:name=".CapitalLettersActivity" />
-        <activity android:name=".DiphthongsActivity" />
-        <activity android:name=".Vocab1Activity" />
-        <activity android:name=".Vocab2Activity"></activity>
+        <activity android:name=".SmallLettersActivity"
+            android:label="@string/category_smallLetters"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+        <activity android:name=".CapitalLettersActivity"
+            android:label="@string/category_capitalLetters"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+        <activity android:name=".DiphthongsActivity"
+            android:label="@string/category_diphthongs"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+        <activity android:name=".Vocab1Activity"
+            android:label="@string/category_vocab1"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+        <activity android:name=".Vocab2Activity"
+            android:label="@string/category_vocab2"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
     </application>
 
 </manifest>
