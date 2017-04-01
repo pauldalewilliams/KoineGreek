@@ -11,30 +11,35 @@
         android:id="@+id/smallLetters"
         style="@style/CategoryStyle"
         android:background="@color/category_smallLetters"
-        android:text="@string/category_smallLetters" />
+        android:text="@string/category_smallLetters"
+        android:onClick="openSmallLetters" />
 
     <TextView
         android:id="@+id/capitalLetters"
         style="@style/CategoryStyle"
         android:background="@color/category_capitalLetters"
-        android:text="@string/category_capitalLetters" />
+        android:text="@string/category_capitalLetters"
+        android:onClick="openCapitalLetters" />
 
     <TextView
         android:id="@+id/diphthongs"
         style="@style/CategoryStyle"
         android:background="@color/category_diphthongs"
-        android:text="@string/category_diphthongs" />
+        android:text="@string/category_diphthongs"
+        android:onClick="openDiphthongs" />
 
     <TextView
         android:id="@+id/vocab1"
         style="@style/CategoryStyle"
         android:background="@color/category_vocab1"
-        android:text="@string/category_vocab1" />
+        android:text="@string/category_vocab1"
+        android:onClick="openVocab1"  />
 
     <TextView
         android:id="@+id/vocab2"
         style="@style/CategoryStyle"
         android:background="@color/category_vocab2"
-        android:text="@string/category_vocab2" />
+        android:text="@string/category_vocab2"
+        android:onClick="openVocab2" />
 
 </LinearLayout>

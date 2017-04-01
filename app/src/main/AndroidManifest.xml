@@ -16,6 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SmallLettersActivity" />
+        <activity android:name=".CapitalLettersActivity" />
+        <activity android:name=".DiphthongsActivity" />
+        <activity android:name=".Vocab1Activity" />
+        <activity android:name=".Vocab2Activity"></activity>
     </application>
 
 </manifest>
