@@ -1,35 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/tan_background"
+    android:background="@color/background"
     android:orientation="vertical"
     tools:context="com.thepantologist.koinegreek.MainActivity">
 
     <TextView
-        android:id="@+id/numbers"
+        android:id="@+id/smallLetters"
         style="@style/CategoryStyle"
-        android:background="@color/category_numbers"
-        android:text="@string/category_numbers" />
+        android:background="@color/category_smallLetters"
+        android:text="@string/category_smallLetters" />
 
     <TextView
-        android:id="@+id/family"
+        android:id="@+id/capitalLetters"
         style="@style/CategoryStyle"
-        android:background="@color/category_family"
-        android:text="@string/category_family" />
+        android:background="@color/category_capitalLetters"
+        android:text="@string/category_capitalLetters" />
 
     <TextView
-        android:id="@+id/colors"
+        android:id="@+id/diphthongs"
         style="@style/CategoryStyle"
-        android:background="@color/category_colors"
-        android:text="@string/category_colors" />
+        android:background="@color/category_diphthongs"
+        android:text="@string/category_diphthongs" />
 
     <TextView
-        android:id="@+id/phrases"
+        android:id="@+id/vocab1"
         style="@style/CategoryStyle"
-        android:background="@color/category_phrases"
-        android:text="@string/category_phrases" />
+        android:background="@color/category_vocab1"
+        android:text="@string/category_vocab1" />
+
+    <TextView
+        android:id="@+id/vocab2"
+        style="@style/CategoryStyle"
+        android:background="@color/category_vocab2"
+        android:text="@string/category_vocab2" />
 
 </LinearLayout>

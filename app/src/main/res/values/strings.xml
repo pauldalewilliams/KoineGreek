@@ -2,15 +2,18 @@
     <!-- Title for the application. [CHAR LIMIT=12] -->
     <string name="app_name">Koine Greek</string>
 
-    <!-- Category name for phrases [CHAR LIMIT=20] -->
-    <string name="category_phrases">Phrases</string>
+    <!-- Category name for small letters [CHAR LIMIT=20] -->
+    <string name="category_smallLetters">Small Letters</string>
 
-    <!-- Category name for the vocabulary words for colors [CHAR LIMIT=20] -->
-    <string name="category_colors">Colors</string>
+    <!-- Category name for capital letters [CHAR LIMIT=20] -->
+    <string name="category_capitalLetters">Capital Letters</string>
 
-    <!-- Category name for the vocabulary words for numbers [CHAR LIMIT=20] -->
-    <string name="category_numbers">Numbers</string>
+    <!-- Category name for diphthongs [CHAR LIMIT=20] -->
+    <string name="category_diphthongs">Diphthongs</string>
 
-    <!-- Category name for the vocabulary words for family members [CHAR LIMIT=20] -->
-    <string name="category_family">Family Members</string>
+    <!-- Category name for vocabulary 1 [CHAR LIMIT=20] -->
+    <string name="category_vocab1">Vocabulary 1</string>
+
+    <!-- Category name for vocabulary 2 [CHAR LIMIT=20] -->
+    <string name="category_vocab2">Vocabulary 2</string>
 </resources>

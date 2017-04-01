@@ -2,15 +2,23 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#536DFE</color>
+
     <!-- Background color for app -->
-    <color name="tan_background">#FFF7DA</color>
-    <!-- Background color for the numbers category -->
-    <color name="category_numbers">#FD8E09</color>
-    <!-- Background color for the family members category -->
-    <color name="category_family">#379237</color>
-    <!-- Background color for the colors category -->
-    <color name="category_colors">#8800A0</color>
-    <!-- Background color for the phrases category -->
-    <color name="category_phrases">#16AFCA</color>
+    <color name="background">#B0BEC5</color>
+
+    <!-- Background color for the small letters category -->
+    <color name="category_smallLetters">#008742</color>
+
+    <!-- Background color for the capital letters category -->
+    <color name="category_capitalLetters">#006E36</color>
+
+    <!-- Background color for the diphthongs category -->
+    <color name="category_diphthongs">#D62D20</color>
+
+    <!-- Background color for the vocabulary 1 category -->
+    <color name="category_vocab1">#FFA700</color>
+
+    <!-- Background color for the vocabulary 2 category -->
+    <color name="category_vocab2">#FFBB39</color>
 </resources>
