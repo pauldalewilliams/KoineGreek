@@ -1,45 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
-    android:orientation="vertical"
     tools:context="com.thepantologist.koinegreek.MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/smallLetters"
-        style="@style/CategoryStyle"
-        android:background="@color/category_smallLetters"
-        android:text="@string/category_smallLetters"
-        android:onClick="openSmallLetters" />
+        <TextView
+            android:id="@+id/smallLetters"
+            style="@style/CategoryStyle"
+            android:background="@color/category_smallLetters"
+            android:text="@string/category_smallLetters" />
 
-    <TextView
-        android:id="@+id/capitalLetters"
-        style="@style/CategoryStyle"
-        android:background="@color/category_capitalLetters"
-        android:text="@string/category_capitalLetters"
-        android:onClick="openCapitalLetters" />
+        <TextView
+            android:id="@+id/capitalLetters"
+            style="@style/CategoryStyle"
+            android:background="@color/category_capitalLetters"
+            android:text="@string/category_capitalLetters" />
 
-    <TextView
-        android:id="@+id/diphthongs"
-        style="@style/CategoryStyle"
-        android:background="@color/category_diphthongs"
-        android:text="@string/category_diphthongs"
-        android:onClick="openDiphthongs" />
+        <TextView
+            android:id="@+id/diphthongs"
+            style="@style/CategoryStyle"
+            android:background="@color/category_diphthongs"
+            android:text="@string/category_diphthongs" />
 
-    <TextView
-        android:id="@+id/vocab1"
-        style="@style/CategoryStyle"
-        android:background="@color/category_vocab1"
-        android:text="@string/category_vocab1"
-        android:onClick="openVocab1"  />
+        <TextView
+            android:id="@+id/vocab1"
+            style="@style/CategoryStyle"
+            android:background="@color/category_vocab1"
+            android:text="@string/category_vocab1" />
 
-    <TextView
-        android:id="@+id/vocab2"
-        style="@style/CategoryStyle"
-        android:background="@color/category_vocab2"
-        android:text="@string/category_vocab2"
-        android:onClick="openVocab2" />
+        <TextView
+            android:id="@+id/vocab2"
+            style="@style/CategoryStyle"
+            android:background="@color/category_vocab2"
+            android:text="@string/category_vocab2" />
 
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>
