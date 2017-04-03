@@ -8,6 +8,6 @@ public class DiphthongsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_diphthongs);
+        setContentView(R.layout.letters_list);
     }
 }

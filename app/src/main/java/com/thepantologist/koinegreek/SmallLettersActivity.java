@@ -11,7 +11,9 @@ public class SmallLettersActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_small_letters);
+        setContentView(R.layout.letters_list);
+
+        // Generate images with https://romannurik.github.io/AndroidAssetStudio/icons-generic.html#source.type=text&source.text.text=%CE%B1&source.text.font=Droid%20Serif&source.space.trim=1&source.space.pad=0&size=88&padding=16&color=rgb(0%2C%200%2C%200)&name=ic_sm_alpha
 
         ArrayList<Letters> smLetters = new ArrayList<>();
         smLetters.add(new Letters("ἄλφα", "alpha"));

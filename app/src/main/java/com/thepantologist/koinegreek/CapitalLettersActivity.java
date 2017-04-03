@@ -11,7 +11,7 @@ public class CapitalLettersActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_capital_letters);
+        setContentView(R.layout.letters_list);
 
         ArrayList<Letters> capLetters = new ArrayList<>();
         capLetters.add(new Letters("ἌΛΦΑ", "ALPHA"));

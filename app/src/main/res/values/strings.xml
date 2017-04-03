@@ -9,7 +9,7 @@
     <string name="category_capitalLetters">Capital Letters</string>
 
     <!-- Category name for diphthongs [CHAR LIMIT=20] -->
-    <string name="category_diphthongs">Diphthongs</string>
+    <string name="category_diphthongs">Diphthongs and Gamma</string>
 
     <!-- Category name for vocabulary 1 [CHAR LIMIT=20] -->
     <string name="category_vocab1">Vocabulary 1</string>
