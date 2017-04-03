@@ -10,7 +10,7 @@
         android:id="@+id/greek_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="@string/smletter_alpha"/>
+        tools:text="ἄλφα"/>
 
     <TextView
         android:id="@+id/transliteration_text_view"

@@ -17,29 +17,4 @@
     <!-- Category name for vocabulary 2 [CHAR LIMIT=20] -->
     <string name="category_vocab2">Vocabulary 2</string>
 
-    <string name="smletter_alpha">ἄλφα</string>
-    <string name="smletter_beta">βῆτα</string>
-    <string name="smletter_gamma">γάμμα</string>
-    <string name="smletter_delta">δέλτα</string>
-    <string name="smletter_epsilon">ἒψιλόν</string>
-    <string name="smletter_zeta">ζήτα</string>
-    <string name="smletter_eta">ἦτα</string>
-    <string name="smletter_theta">θῆτα</string>
-    <string name="smletter_iota">ἰότα</string>
-    <string name="smletter_kappa">κάππα</string>
-    <string name="smletter_lambda">λάμβδα</string>
-    <string name="smletter_mu">μῦ</string>
-    <string name="smletter_nu">νῦ</string>
-    <string name="smletter_xi">ξῖ</string>
-    <string name="smletter_omicron">ὂμικρόν</string>
-    <string name="smletter_pi">πῖ</string>
-    <string name="smletter_rho">ῥῶ</string>
-    <string name="smletter_sigma">σίγμα</string>
-    <string name="smletter_tau">ταῦ</string>
-    <string name="smletter_upsilon">ὖψιλόν</string>
-    <string name="smletter_phi">φῖ</string>
-    <string name="smletter_chi">χῖ</string>
-    <string name="smletter_psi">ψῖ</string>
-    <string name="smletter_omega">ὦμέγα</string>
-
 </resources>
