@@ -8,24 +8,25 @@ class Letters {
     private String mGreekLetter;
     private String mGreekOriginal;
     private String mGreekTransliteration;
+    private int mAudioResourceId;
 
 
-    public Letters(String greekLetter, String greekOriginal, String greekTransliteration) {
+    public Letters(String greekLetter, String greekOriginal, String greekTransliteration, int audioResourceId) {
         mGreekLetter = greekLetter;
         mGreekOriginal = greekOriginal;
         mGreekTransliteration = greekTransliteration;
+        mAudioResourceId = audioResourceId;
     }
 
     public String getGreekLetter() {
         return mGreekLetter;
     }
 
-    public String getGreekOriginal() {
-
-        return mGreekOriginal;
-    }
+    public String getGreekOriginal() { return mGreekOriginal; }
 
     public String getGreekTransliteration() {
         return mGreekTransliteration;
     }
+
+    public int getAudioResourceId () { return mAudioResourceId; }
 }
