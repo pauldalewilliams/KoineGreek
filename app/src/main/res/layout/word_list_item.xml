@@ -4,17 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    android:minHeight="@dimen/letterslist_item_height"
+    android:minHeight="@dimen/wordlist_item_height"
     android:orientation="horizontal">
-
-    <TextView
-        android:id="@+id/letter_text_view"
-        android:layout_width="@dimen/letterslist_item_height"
-        android:layout_height="@dimen/letterslist_item_height"
-        android:fontFamily="serif"
-        android:gravity="center"
-        android:textSize="48sp"
-        tools:text="α" />
 
     <LinearLayout
         android:id="@+id/text_container"
@@ -29,21 +20,31 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:fontFamily="serif"
-            android:gravity="bottom"
-            android:textAppearance="?android:textAppearanceMedium"
+            android:gravity="center_vertical"
+            android:textAppearance="?android:textAppearanceLarge"
             android:textColor="@android:color/white"
             android:textStyle="bold"
-            tools:text="ἄλφα" />
+            tools:text="ἄγγελος" />
 
         <TextView
             android:id="@+id/transliteration_text_view"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:gravity="top"
+            android:gravity="center_vertical"
             android:textAppearance="?android:textAppearanceMedium"
             android:textColor="@android:color/white"
-            tools:text="alpha" />
+            tools:text="angelos" />
+
+        <TextView
+            android:id="@+id/translation_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@android:color/white"
+            tools:text="angel, messenger" />
 
     </LinearLayout>
 </LinearLayout>
