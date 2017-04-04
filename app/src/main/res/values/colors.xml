@@ -5,7 +5,7 @@
     <color name="colorAccent">#536DFE</color>
 
     <!-- Background color for app -->
-    <color name="background">#B0BEC5</color>
+    <color name="background">#FFFFFF</color>
 
     <!-- Background color for the small letters category -->
     <color name="category_smallLetters">#008742</color>
@@ -14,7 +14,7 @@
     <color name="category_capitalLetters">#006E36</color>
 
     <!-- Background color for the diphthongs category -->
-    <color name="category_diphthongs">#D62D20</color>
+    <color name="category_diphthongs">#DE564C</color>
 
     <!-- Background color for the vocabulary 1 category -->
     <color name="category_vocab1">#FFA700</color>

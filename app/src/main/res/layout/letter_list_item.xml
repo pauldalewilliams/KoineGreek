@@ -1,22 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:background="@color/background"
+    android:minHeight="@dimen/list_item_height"
+    android:orientation="horizontal">
 
     <TextView
-        android:id="@+id/greek_text_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/letter_text_view"
+        android:layout_width="@dimen/list_item_height"
+        android:layout_height="@dimen/list_item_height"
         android:fontFamily="serif"
-        tools:text="ἄλφα"/>
+        android:gravity="center"
+        android:textSize="48sp"
+        tools:text="α" />
 
-    <TextView
-        android:id="@+id/transliteration_text_view"
+    <LinearLayout
+        android:id="@+id/text_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:text="alpha"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="16dp">
 
+        <TextView
+            android:id="@+id/greek_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fontFamily="serif"
+            android:gravity="bottom"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            tools:text="ἄλφα" />
+
+        <TextView
+            android:id="@+id/transliteration_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="top"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@android:color/white"
+            tools:text="alpha" />
+
+    </LinearLayout>
 </LinearLayout>
