@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class WordsAdapter extends ArrayAdapter<Words> {
+class WordsAdapter extends ArrayAdapter<Words> {
 
     private int mColorResourceId;
 
