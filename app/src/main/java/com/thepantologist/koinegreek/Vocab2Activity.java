@@ -1,5 +1,6 @@
 package com.thepantologist.koinegreek;
 
+import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,6 +20,7 @@ public class Vocab2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.words_list);
+        setVolumeControlStream(AudioManager.STREAM_MUSIC);
 
         final ArrayList<Words> vocab2 = new ArrayList<>();
         vocab2.add(new Words("ἀδελφός", "adelphos", "brother", R.raw.adelphos));

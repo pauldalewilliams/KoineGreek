@@ -2,6 +2,7 @@ package com.thepantologist.koinegreek;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.media.AudioManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setVolumeControlStream(AudioManager.STREAM_MUSIC);
 
         TextView smallLetters = (TextView) findViewById(R.id.smallLetters);
         smallLetters.setOnClickListener(new View.OnClickListener() {

@@ -1,5 +1,6 @@
 package com.thepantologist.koinegreek;
 
+import android.media.AudioManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +18,7 @@ public class SmallLettersActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.letters_list);
+        setVolumeControlStream(AudioManager.STREAM_MUSIC);
 
         final ArrayList<Letters> smLetters = new ArrayList<>();
         smLetters.add(new Letters("α", "ἄλφα", "alpha", R.raw.a));

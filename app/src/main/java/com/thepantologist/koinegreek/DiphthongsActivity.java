@@ -1,5 +1,6 @@
 package com.thepantologist.koinegreek;
 
+import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,6 +18,7 @@ public class DiphthongsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.letters_list);
+        setVolumeControlStream(AudioManager.STREAM_MUSIC);
 
         final ArrayList<Letters> diphthongs = new ArrayList<>();
         diphthongs.add(new Letters("αι", "αι", "ai", R.raw.ai));
