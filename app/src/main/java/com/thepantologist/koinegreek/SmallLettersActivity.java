@@ -1,5 +1,6 @@
 package com.thepantologist.koinegreek;
 
+import android.content.Context;
 import android.media.AudioManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +10,8 @@ import android.widget.ListView;
 import android.media.MediaPlayer;
 
 import java.util.ArrayList;
+
+import static android.media.AudioManager.AUDIOFOCUS_LOSS_TRANSIENT;
 
 public class SmallLettersActivity extends AppCompatActivity {
 
@@ -22,10 +25,30 @@ public class SmallLettersActivity extends AppCompatActivity {
         }
     };
 
+    private AudioManager mAudioManager;
+
+    private AudioManager.OnAudioFocusChangeListener mOnAudioFocusChangeListener =
+            new AudioManager.OnAudioFocusChangeListener() {
+                @Override
+                public void onAudioFocusChange(int focusChange) {
+                    if (focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT ||
+                            focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK) {
+                        mMediaPlayer.pause();
+                        mMediaPlayer.seekTo(0);
+                    } else if (focusChange == AudioManager.AUDIOFOCUS_GAIN) {
+                        mMediaPlayer.start();
+                    } else if (focusChange == AudioManager.AUDIOFOCUS_LOSS) {
+                        releaseMediaPlayer();
+                    }
+                }
+            };
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.letters_list);
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
+
+        mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
         final ArrayList<Letters> smLetters = new ArrayList<>();
         smLetters.add(new Letters("α", "ἄλφα", "alpha", R.raw.a));
@@ -65,9 +88,16 @@ public class SmallLettersActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Letters letter = smLetters.get(position);
                 releaseMediaPlayer();
-                mMediaPlayer = MediaPlayer.create(SmallLettersActivity.this, letter.getAudioResourceId());
-                mMediaPlayer.start();
-                mMediaPlayer.setOnCompletionListener(mCompletionListener);
+
+                int result = mAudioManager.requestAudioFocus(mOnAudioFocusChangeListener,
+                        AudioManager.STREAM_MUSIC,
+                        AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
+
+                if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
+                    mMediaPlayer = MediaPlayer.create(SmallLettersActivity.this, letter.getAudioResourceId());
+                    mMediaPlayer.start();
+                    mMediaPlayer.setOnCompletionListener(mCompletionListener);
+                }
             }
         });
     }
@@ -84,6 +114,14 @@ public class SmallLettersActivity extends AppCompatActivity {
 
             // Set the media player back to null.
             mMediaPlayer = null;
+
+            mAudioManager.abandonAudioFocus(mOnAudioFocusChangeListener);
         }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        releaseMediaPlayer();
     }
 }

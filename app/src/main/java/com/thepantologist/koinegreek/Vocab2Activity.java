@@ -1,5 +1,6 @@
 package com.thepantologist.koinegreek;
 
+import android.content.Context;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
@@ -24,11 +25,31 @@ public class Vocab2Activity extends AppCompatActivity {
         }
     };
 
+    private AudioManager mAudioManager;
+
+    private AudioManager.OnAudioFocusChangeListener mOnAudioFocusChangeListener =
+            new AudioManager.OnAudioFocusChangeListener() {
+                @Override
+                public void onAudioFocusChange(int focusChange) {
+                    if (focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT ||
+                            focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK) {
+                        mMediaPlayer.pause();
+                        mMediaPlayer.seekTo(0);
+                    } else if (focusChange == AudioManager.AUDIOFOCUS_GAIN) {
+                        mMediaPlayer.start();
+                    } else if (focusChange == AudioManager.AUDIOFOCUS_LOSS) {
+                        releaseMediaPlayer();
+                    }
+                }
+            };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.words_list);
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
+
+        mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
         final ArrayList<Words> vocab2 = new ArrayList<>();
         vocab2.add(new Words("ἀδελφός", "adelphos", "brother", R.raw.adelphos));
@@ -58,9 +79,16 @@ public class Vocab2Activity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Words word = vocab2.get(position);
                 releaseMediaPlayer();
-                mMediaPlayer = MediaPlayer.create(Vocab2Activity.this, word.getAudioResourceId());
-                mMediaPlayer.start();
-                mMediaPlayer.setOnCompletionListener(mCompletionListener);
+
+                int result = mAudioManager.requestAudioFocus(mOnAudioFocusChangeListener,
+                        AudioManager.STREAM_MUSIC,
+                        AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
+
+                if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
+                    mMediaPlayer = MediaPlayer.create(Vocab2Activity.this, word.getAudioResourceId());
+                    mMediaPlayer.start();
+                    mMediaPlayer.setOnCompletionListener(mCompletionListener);
+                }
             }
         });
     }
@@ -77,6 +105,14 @@ public class Vocab2Activity extends AppCompatActivity {
 
             // Set the media player back to null.
             mMediaPlayer = null;
+
+            mAudioManager.abandonAudioFocus(mOnAudioFocusChangeListener);
         }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        releaseMediaPlayer();
     }
 }
