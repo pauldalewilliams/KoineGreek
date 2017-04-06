@@ -11,51 +11,76 @@
         android:background="@color/background"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/smallLetters"
-            style="@style/CategoryStyle"
-            android:background="@color/category_smallLetters"
-            android:text="@string/category_smallLetters" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/category_smallLetters">
+            <TextView
+                android:id="@+id/smallLetters"
+                style="@style/CategoryStyle"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="@string/category_smallLetters" />
+        </FrameLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="1dp" />
 
-        <TextView
-            android:id="@+id/capitalLetters"
-            style="@style/CategoryStyle"
-            android:background="@color/category_capitalLetters"
-            android:text="@string/category_capitalLetters" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/category_capitalLetters">
+            <TextView
+                android:id="@+id/capitalLetters"
+                style="@style/CategoryStyle"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="@string/category_capitalLetters" />
+        </FrameLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="1dp" />
 
-        <TextView
-            android:id="@+id/diphthongs"
-            style="@style/CategoryStyle"
-            android:background="@color/category_diphthongs"
-            android:text="@string/category_diphthongs" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/category_diphthongs">
+            <TextView
+                android:id="@+id/diphthongs"
+                style="@style/CategoryStyle"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="@string/category_diphthongs" />
+        </FrameLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="1dp" />
 
-        <TextView
-            android:id="@+id/vocab1"
-            style="@style/CategoryStyle"
-            android:background="@color/category_vocab1"
-            android:text="@string/category_vocab1" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/category_vocab1">
+            <TextView
+                android:id="@+id/vocab1"
+                style="@style/CategoryStyle"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="@string/category_vocab1" />
+        </FrameLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="1dp" />
 
-        <TextView
-            android:id="@+id/vocab2"
-            style="@style/CategoryStyle"
-            android:background="@color/category_vocab2"
-            android:text="@string/category_vocab2" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/category_vocab2">
+            <TextView
+                android:id="@+id/vocab2"
+                style="@style/CategoryStyle"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="@string/category_vocab2" />
+        </FrameLayout>
 
     </LinearLayout>
 </ScrollView>
